@@ -1,83 +1,166 @@
 \documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\usepackage{graphicx, soul}
+\usepackage[dvipsnames]{xcolor}
 
-\title{Parte 2: Ciencias del Comportamiento}
+\setul{0.5ex}{0.3ex}
+
+\newcommand{\ulcolor}[2][Red]{\setulcolor{#1}\ul{#2}}
+\newcommand*\sepline{%
+  \begin{center}
+    \rule[1ex]{.5\textwidth}{.5pt}
+  \end{center}}
+
+\title{Guía Práctica 3 - Comportamiento (Resuelto)}
 \author{Juani Elosegui}
-\date{Octubre 2024}
+\date{Noviembre 2024}
 
 \begin{document}
-
-\maketitle
-
-    \section*{Módulo I - Sesgos congnitivos (Parte I)}
-        \textbf{Sesgo de competencia:} evitamos colaborar incluso cuando nos conviene. (Falacia de "suma cero")
-        \\
-        \\
-        A través de experimentos y observaciones se estudia la conducta humana, y en base a eso, se puede pensar acerca de una economía del comportamiento.
-
-        Se piensa cómo los individuos o grupos de personas \emph{toman o deberían tomar} las decisiones.
-        \\
-        \\
-        Tres enfoques:
-        \begin{itemize}
-            \item Enfoque normativo: con supuestos, se asume el comportamiento de los agentes racionales: "econs".
-            \item Enfoque descriptivo: cómo decidimos en la práctica.
-            \item Enfoque prescriptiva: genera "recetas" acerca de cómo deberían de actuar para hacer la mejor decisión.
-        \end{itemize}
-        Los \textbf{agentes racionales} son los que están interesados en su beneficio propio/utilidad. Los \emph{homo economicus} conocen sus preferencias, conocen todas las alternativas y eligen siempre la mejor opción posible y que más rédito le dé.
-        \\
-        También, actúan de manera neutral frente al riesgo y las pérdidas, ignoran opciones irrelevantes, etc.
-        \\
-        \\
-        En general, los humanos normales no sabemos lo que queremos hasta que lo vemos, no contemplamos todas las opciones en simultáneo, no siempre elegimos la mejor opción y tenemos un exceso de confianza en nuestros pronósticos.
-        \\
-        \\
-        Si sos irracional no quiere decir que seas un boludo errático, si no que tu comportamiento es distinto al esperado.
-        \\
-        La \textbf{economía del comportamiento} incorpora nociones de psicología y neurociencias al análisis de la toma ade decisiones económicas. Esta nace cuando se demuestra la existencia de agentes irracionales.
-        \\
-        \\
-        Para \textbf{Herbert Simon}, tenemos todos un poco de irracionalidad acotada. No tomamos decisiones óptimas pero sí tomamos decisiones que nos puedan satisfacer.
-        \\
-        \textbf{Daniel Kahneman} explicó la teoría prospectiva.
-        \\
-        \textbf{Richard Thaler} se especializó en intervenciones minimalistas que pueden pasar desapercibidas pero que cambian el comportamiento de manera sustancial.
-        \\
-        \\
-        El efecto que generan las pérdidas suelen ser mucho mayor que el efecto que nos da el placer cuando ganamos.
-        \\
-        \\
-        Los \textbf{sesgos cognitivos} son distorsiones sistemáticas en la racionalidad y en cómo procesamos la información las personas.
-        \\
-        \\
-        El \textbf{sistema 1} es un tipo de pensamiento en los humanos que actúa de manera rápida, instintiva, emocional y subconsciente.
-        \\
-        El \textbf{sistema 2} es el otro tipo de pensamiento, que se identifica como más lento, deliberativo, lógico y consciente.
-
-    \section*{Módulo II: Sesgos Cognitivos (Parte II)}
-        El \textbf{efecto de anclaje} ocurre cuando desconocemos un número y, antes de pensar cuál es nuestro mejor estimativo, contemplamos un valor dado. El \emph{ancla} será ese valor que nos dieron, y nuestro estimativo estará sesgado por ese ancla. Si el valor del ancla es muy alto, podemos sobreestimar el valor verdadero; y si el valor del ancla es muy bajo, lo podemos subestimar.
-        \\
-        \\
-        Si tenemos dos anclas: $a_{low}, a_{high}$ y dos medias de respuestas según cada ancla: $m_{low}, m_{high}$. Se define el \textbf{índice de anclaje} como:
-        \[\frac{m_{high} - m_{low}}{a_{high} - a_{low}}\]
-        \\
-        \\
-        Toma fuerza el efecto del anclaje en la economía porque se puede hacer lo mismo pero con los precios.
-        \\
-        \\
-        La \textbf{coherencia arbitraria} es un fenómeno que explica que si bien los precios están influenciados comúnmente por valores arbitrarios (anclas), estas anclas son valores coherentes dentro de todo.
-        \\
-        \\
-        El concepto de \textbf{justicia} les pone un límite a cualquier precio en las transacción. A los humanos nos preocupa que las transacciones sean justas.
-
-    \section*{Módulo III: Manejando la Incertidumbre}
-        Supongamos que tenemos un grado de información nula acerca de una decisión a tomar. Este tipo de decisiones se llama \textbf{decisiones bajo riesgo}. No sabemos en qué estado se encuentra o se encontrará el mundo, pero sabemos \emph{con qué probabilidad pasará cada cosa}.
-
-        Una decisión bajo riesgo puede ser si una aseguradora decide asegurar a alguien, o si un inversor invierte en acciones.
-
-    \section*{Módulo IV: Distorsionando la Incertidumbre}
-
-    \section*{Módulo V: Rompiendo la Teoría}
-        
     
+    \maketitle
+
+    \section*{\underline{Ejercicio 1}}
+        \textbf{Datos:}
+        \begin{itemize}
+            \item Apuesta 1:
+            
+            Opción A: Obtener \$1.000.000 seguro. 
+            
+            Opción B: Obtener \$1.000.000 con 98\% de probabilidad, \$2.500.000 con 1\% de probabilidad ó \$0 con 1\% de probabilidad.
+            \item Apuesta 2:
+
+            Opción A: Obtener \$1.000.000 con 2\% de probabilidad o \$0 con 98\% de probabilidad.
+
+            Opción B: Obtener \$2.500.000 con 1\% de probabilidad o \$0 con 99\% de probabilidad.
+        \end{itemize}
+        \textbf{Demuestre que si alguien elige A en la apuesta 1 y B en la apuesta 2, entonces no existe ninguna función de utilidad que pueda explicar sus preferencias mediante EUT}
+        \\
+        \\
+        El bienestar de la gente es algo totalmente subjetivo -o, técnicamente, algo logarítmico- ya que depende en cómo cambia la riqueza de las personas.
+        \\
+        Podemos ver que en la primera apuesta, la gente suele fatalizar la probabilidad de que no reciba dinero en absoluto. Parece ser que ese 1\% suena como algo terrible para ellos. Esto sucede porque la gente sobreestima las probabilidades bajas, y subestima las probabilidades altas. Estas probabilidades tienen un peso psicológico que distorsiona su decisión. Por eso, se espera que elija la opción A, donde se obtiene \$1.000.000 seguro.
+        \\
+        \\
+        La teoría de la utilidad esperada establece que los individuos eligen la opción que maximiza la utilidad esperada. Esto se expresa como: \(\sum_{i}p_{i} \cdot u(x_{i})\). Si calculásemos las utilidades esperadas de las opciones que elige de la apuesta 1 tenemos que:
+        \[EUT_{1A}:u(1.000.000)\]
+        \[EUT_{1B}:0,98 \cdot u(1.000.000) + 0,01 \cdot u(2.500.000) + 0,01 \cdot u(0)\]
+        Si calculamos la EUT de la apuesta 2:
+        \[EUT_{2A}: 0,02 \cdot u(1.000.000) + 0,98 \cdot u(0)\]
+        \[EUT_{2B}: 0,01 \cdot u(2.500.000) + 0,99 \cdot u(0)\]
+        \textit{No conocemos la función de utilidad, por eso directamente la denotamos como $u(.)$}
+        \\
+        \\
+        Si sabemos que una persona elige A en la apuesta 1, quiere decir que:
+        \[EUT_{1A} > EUT_{1B}\]
+        \[u(1.000.000) > 0,98 \cdot u(1.000.000) + 0,01 \cdot u(2.500.000) + 0,01 \cdot u(0)\]
+        \[0,02 \cdot u(1.000.000) > 0,01 \cdot u(2.500.000) + 0,01 \cdot u(0)\]
+        \\
+        Si sabemos también que una persona elige B en la apuesta 2, quiere decir que:
+        \[EUT_{2B} > EUT_{2A}\]
+        \[0,01 \cdot u(2.500.000) + 0,99 \cdot u(0) > 0,02 \cdot u(1.000.000) + 0,98 \cdot u(0)\]
+        \[0,01 \cdot u(2.500.000) + 0,01 \cdot u(0) > 0,02 \cdot u(1.000.000)\]
+        \\
+        De las desigualdades despejadas, no se pueden cumplir las dos en simultáneo, lo que nos lleva a una contradicción. Esto demuestra que, cuando se habla de probabilidades o sesgos psicológicos, las funciones de utilidad a veces dejan de tomar papeles relevantes.
+        \\
+        \\
+        Se justifica bien con la \emph{paradoja de Allais}.
+
+    \section*{\underline{Ejercicio 2}}
+        \textbf{Datos:}
+        \begin{itemize}
+            \item Se tienen 12 bolitas: 4 son \ulcolor[blue]{azules} y las 8 restantes son \ulcolor[green]{verdes} o \ulcolor[purple]{violetas}.
+            \item Se saca al azar una bolita de esta urna y se presentan las dos apuestas:
+            \item Apuesta 1:
+
+            Opción A: ganar \$1.000.000 si la bolita es \ulcolor[blue]{azul}.
+
+            Opción B: ganar \$1.000.000 si la bolita es \ulcolor[green]{verde}.
+            \item Apuesta 2:
+
+            Opción A: ganar \$1.000.000 si la bolita es \ulcolor[blue]{azul} o \ulcolor[purple]{violeta}.
+
+            Opción B: ganar \$1.000.000 si la bolita es \ulcolor[green]{verde} o \ulcolor[purple]{violeta}.
+        \end{itemize}
+        \textbf{Demuestre que si alguien elige A en la apuesta 1 y B en la apuesta 2, entonces no existe ninguna función de utilidad que pueda explicar sus preferencias mediante EUT}
+        \\
+        \\
+        Este inciso se puede justificar muy bien con la \emph{paradoja de Ellsberg}. La gente no parece pesar sus decisiones por la probabilidad de ocurrencia de los eventos (no calcula utilidades esperadas).
+        \\
+        \\
+        Calculemos qué fue lo que pasó para que veamos que, en efecto, sí sucede una paradoja.
+        \\
+        La teoría de la utilidad esperada establece que los individuos eligen la opción que maximiza la utilidad esperada. Esto se expresa como: \(\sum_{i}p_{i} \cdot u(x_{i})\). Si calculásemos las utilidades esperadas de las opciones que elige de la apuesta 1 tenemos que:
+        \[EUT_{1A}: \frac{4}{12} \cdot u(1.000.000)\]
+        \[EUT_{1B}: \frac{8 - x_{violetas}}{12} \cdot u(1.000.000)\]
+        Si calculamos la EUT de la apuesta 2:
+        \[EUT_{2A}: \frac{4}{12} \cdot u(1.000.000) + \frac{8-y_{verdes}}{12} \cdot u(1.000.000)\]
+        \[EUT_{2B}: \frac{8-x_{violetas}}{12} \cdot u(1.000.000) + \frac{8-y_{verdes}}{12} \cdot u(1.000.000)\]
+        Si sabemos que eligió dos veces la opción A, no existe ninguna función de utilidad posible que satisfaga las condiciones.
+        \\
+        \\
+        \textit{\ulcolor[red]{Me debería esmerar en hacer alguna explicación con cuentas más fácil. De todas formas, no entendí mucho el PDF del pizarrón. Preguntarle a Mathi o a alguien más.}}
+
+\sepline
+
+    \section*{\underline{Ejercicio 1}}
+        \textbf{Datos:}
+        \begin{itemize}
+            \item Una persona recibe un cheque de \$1.900, y se le presentan dos opciones:
+            
+            Opción A: terminar con \$1.950 seguro.
+
+            Opción B: terminar con \$1.800 con una probabilidad del 20\% o terminar con \$2.000 con una probabilidad del 80\%.
+        \end{itemize}
+        \textbf{Calcule el valor monetario esperado de cada opción y la decisión óptima según EMVT}
+        \\
+        \\
+        \[EMV_{A}: 1950\]
+        \[EMV_{B}: 0,2 \cdot 1.800 + 0,8 \cdot 2.000\]
+        \[EMV_{B}: 1.960\]
+        Como $EMV_{B} > EMV_{A}$, la decisión óptima según EMVT es elegir la opción B.
+        \\
+        \\
+        \textbf{Calcule la utilidad esperada de cada opción y la decisión óptima según EUT para un agente cuya función de utilidad es \(u(v)=\log_{10} (v+1)\)}
+        \\
+        \\
+        \[EU_{A}: u(1950) = \log_{10}(1.950 + 1)\]
+        \[EU_{A}: u(1.950) = \log_{10}(1.951)\]
+        \[EU_{A}: u(1.950) \approx 3,2902\]
+        \\
+        \[EU_{B}: u(.) = 0,2 \cdot \log_{10}(1.800 + 1) + 0,8 \cdot \log_{10}(2.000 + 1)\]
+        \[EU_{B}: u(.) = 0,2 \cdot \log_{10}(1.801) + 0,8 \cdot \log_{10}(2.001)\]
+        \[EU_{B}: u(.) \approx 3,2921\]
+        \\
+        Como \(EU_{B} > EU_{A}\), la decisión óptima sigue siendo la opción B.
+        \\
+        \\
+        \textbf{Calcule el valor psicológico esperado de cada opción y la decisión predicha según PT asumiendo que la función de utilidad tiene una raíz quinta para las ganancias, una raíz cuadrada para las pérdidas, y que la función de pesos es \(\pi(p) = \frac{1}{e^{(ln(\frac{1}{p})^{0,7})}}\)}
+        \\
+        \\
+        \[v(x) = \left\{\begin{array}{lcc} x^{\frac{1}{5}} & si & R \geq V \\ \\ -|x|^{\frac{1}{2}} & si & R < V\end{array} \right.\]
+        La rama de arriba es la ganancia; la de abajo, las pérdidas.
+        \\
+        \\
+        Los valores psicológicos (PV) son:
+        \[PV_{A}: v(1.950)\]
+        ¿Qué función usamos? Este es un evento probable -seguro, por cierto-, por lo que vamos a usar la función de las ganancias:
+        \[PV_{A}: v(1.950) = 1.950^{\frac{1}{5}}\]
+        \[PV_{A}: v(1.950) \approx 4,55\]
+        \\
+        \[PV_{B}: \pi(0,2) \cdot v(1.800) + \pi(0,8) \cdot v(2.000)\]
+        \[PV_{B} \approx 4,92\]
+        \textit{Notar que no usamos la rama de las pérdidas, ya que todas son interpretadas como ganancias netas.}
+        \\
+        \\
+        \textbf{¿Cambia la respuesta al punto anterior si la persona recibía un cheque de \$2.000?}
+        \\
+        \\
+        Si recibimos un cheque de \$2.000, y después nos dicen que nos van a terminar dando \$1.950; no sólo nos cagaron, si no que perdimos \$50. Ahora sí vamos a usar rama de las pérdidas.
+        \\
+        \[PV_{A}: v(-50) = -|-50|^{\frac{1}{2}}\]
+        \[PV_{A}: v(-50) \approx 7,07\]
+        \\
+        \[PV_{B}: v(-200), v(-0) = \pi(0,2) \cdot v(-200) + \pi(0,8) \cdot v(-0)\]
+        \[PV_{B}: v(-200), v(-0) \approx -3,45\]
+        Conclusión: sí cambia. Nunca fui de muchas palabras.
+
 \end{document}
