@@ -46,7 +46,7 @@
         Si calculamos la EUT de la apuesta 2:
         \[EUT_{2A}: 0,02 \cdot u(1.000.000) + 0,98 \cdot u(0)\]
         \[EUT_{2B}: 0,01 \cdot u(2.500.000) + 0,99 \cdot u(0)\]
-        \textit{No conocemos la función de utilidad, por eso directamente la denotamos como $u(.)$}
+        \textit{COMENTARIO: No conocemos la función de utilidad, por eso directamente la denotamos como $u(.)$}
         \\
         \\
         Si sabemos que una persona elige A en la apuesta 1, quiere decir que:
@@ -133,7 +133,7 @@
         Como \(EU_{B} > EU_{A}\), la decisión óptima sigue siendo la opción B.
         \\
         \\
-        \textbf{Calcule el valor psicológico esperado de cada opción y la decisión predicha según PT asumiendo que la función de utilidad tiene una raíz quinta para las ganancias, una raíz cuadrada para las pérdidas, y que la función de pesos es \(\pi(p) = \frac{1}{e^{(ln(\frac{1}{p})^{0,7})}}\)}
+        \textbf{Calcule el valor psicológico esperado de cada opción y la decisión predicha según PT asumiendo que la función de utilidad tiene una raíz quinta para las ganancias, una raíz cuadrada para las pérdidas, y que la función de peso decisional es \(\pi(p) = \frac{1}{e^{(ln(\frac{1}{p})^{0,7})}}\)}
         \\
         \\
         \[v(x) = \left\{\begin{array}{lcc} x^{\frac{1}{5}} & si & R \geq V \\ \\ -|x|^{\frac{1}{2}} & si & R < V\end{array} \right.\]
@@ -148,7 +148,7 @@
         \\
         \[PV_{B}: \pi(0,2) \cdot v(1.800) + \pi(0,8) \cdot v(2.000)\]
         \[PV_{B} \approx 4,92\]
-        \textit{Notar que no usamos la rama de las pérdidas, ya que todas son interpretadas como ganancias netas.}
+        \textit{COMENTARIO: Notar que no usamos la rama de las pérdidas, ya que todas son interpretadas como ganancias netas.}
         \\
         \\
         \textbf{¿Cambia la respuesta al punto anterior si la persona recibía un cheque de \$2.000?}
@@ -162,5 +162,53 @@
         \[PV_{B}: v(-200), v(-0) = \pi(0,2) \cdot v(-200) + \pi(0,8) \cdot v(-0)\]
         \[PV_{B}: v(-200), v(-0) \approx -3,45\]
         Conclusión: sí cambia. Nunca fui de muchas palabras.
+    \section*{Ejercicio 2}
+        \textbf{Datos:}
+        \begin{itemize}
+            \item Pedro interpreta a las pérdidas como una \(x^{\frac{1}{2}}\) y a las ganancias como una \(x^{\frac{1}{5}}\).
+            \item Su función de pesos decisionales es \(\pi(p) = \frac{1}{e^{(ln(\frac{1}{p})^{0,7})}}\).
+            \item Situación A)
+
+            Víctor le regala a Pedro \$100. Después, lo invita a apostar: gana \$100 más con total seguridad como opción 1, o gana \$200 más con una probabilidad del 80\% como opción 2.
+
+            \item Situación B)
+
+            Víctor le regala \$300. Después, lo invita a apostar: pierde \$200 con total seguridad como opción 1, o pierde los \$300 con una probabilidad del 20\% como opción 2.
+        \end{itemize}
+        \textbf{¿Qué elige Pedro en cada escenario?}
+        \\
+        \\
+        Calculo el valor psicológico de las dos opciones en la situación a):
+        \[PV_{A1}: v(100 + 100)\]
+        \[PV_{A1}: v(200)\]
+        \[PV_{A1}: 200^{\frac{1}{5}}\]
+        \textit{COMENTARIO: Notar que no tenemos pérdidas, sólo usamos la rama de la función partida para las ganancias netas}.
+        \[PV_{A1} \approx 2,891\]
+        \\
+        \[PV_{A2}: \pi(0,8) \cdot v(100 + 200)\]
+        \[PV_{A2}: \pi(0,8) \cdot v(300)\]
+        \[PV_{A2}: \frac{1}{e^{(ln(\frac{1}{0,8})^{0,7})}} \cdot 300^{\frac{1}{5}}\]
+        \[PV_{A2} \approx 3,061\]
+        Como \(PV_{A2} > PV_{A1}\), Pedro optará por la opción 1.
+        \\
+        \textit{COMENTARIO: si fueran iguales en términos aproximados de valor psicológico, elige cualquiera de las dos. Es una pelotudez lo que estoy diciendo, pero es un detalle que me di cuenta.}
+        \\
+        \\
+        Calculo el valor psicológico de las dos opciones en la situación b):
+        \[PV_{B1}: v(300 - 200)\]
+        \[PV_{B1}: v(100)\]
+        \[PV_{B1}: 100^{\frac{1}{5}}\]
+        \[PV_{B1} \approx 2,51\]
+        \\
+        \[PV_{B2}: \pi(0,2) \cdot v(300 - 300)\]
+        \[PV_{B2}: \frac{1}{e^{(ln(\frac{1}{0,2})^{0,7})}} \cdot v(0)\]
+        \[PV_{B2}: \frac{1}{e^{(ln(\frac{1}{0,2})^{0,7})}} \cdot 0^{\frac{1}{5}}\]
+        \[PV_{B2} = 0\]
+        Pedro elige la opción 1 también.
+        \\
+        \textit{\ulcolor[red]{Preguntar. Tengo más dudas en este último que Ricky Martin a los 15.}}
+        \\
+        \\
+        Por lo tanto, la opción correcta es la A) Elige la opción 1 en ambas situaciones.
 
 \end{document}
