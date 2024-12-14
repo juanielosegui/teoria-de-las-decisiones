@@ -1,16 +1,40 @@
 \documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\usepackage{graphicx, soul, amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[a4paper, margin=0.8in]{geometry}
+\usepackage{fancyhdr} % Paquete para encabezados y pies de página
 
-\title{Teoría de las Decisiones - Bibliografía Resumida (Primer Parcial)}
-\author{Juan Ignacio Elosegui}
-\date{Septiembre 2024}
+% Configuración de soul
+\setul{0.5ex}{0.3ex}
+
+% Comandos personalizados
+\newcommand{\ulcolor}[2][Red]{\setulcolor{#1}\ul{#2}}
+\newcommand*\sepline{%
+  \begin{center}
+    \rule[1ex]{.5\textwidth}{.5pt}
+  \end{center}}
+
+% Configuración de encabezado y pie de página para todas las páginas
+\fancypagestyle{main}{
+    \fancyhf{} % Limpia encabezados y pies de página
+    \fancyhead[C]{Juan Ignacio Elosegui} % Encabezado centrado con tu nombre
+    \fancyfoot[R]{\thepage} % Número de página alineado a la derecha en el pie
+    \renewcommand{\headrulewidth}{0.4pt} % Línea bajo el encabezado
+    \renewcommand{\footrulewidth}{0pt}   % Sin línea en el pie de página
+}
+
+% Aplicar el estilo por defecto a todo el documento
+\pagestyle{main}
+
+\title{Teoría de las Decisiones $-$ Comportamiento (Resumen)}
+\date{Noviembre 2024}
 
 \begin{document}
 
-\maketitle
-
-\newpage
-
+    % Primera página con título y encabezado
+    \maketitle
+    \thispagestyle{main} % Asegura el estilo en la primera página
+    
 \section*{\underline{Módulo I: Teoría de Juegos}}
     \subsection*{\textbf{Clase I: Dixit Cap. 2 página 18 a 36}}
         No incluí todo lo que es de características de los juegos y los tipos de juegos. Con saberlos alcanza.
@@ -30,12 +54,9 @@
 
         Los juegos simultáneos con estrategias puras se pueden ver en matrices de juego o cuadro de pagos. Este cuadro es la \emph{forma normal} del juego.
 
-        \begin{figure}
-            \centering
+        \begin{center}
             \includegraphics[width=0.5\linewidth]{figs/fig9.PNG}
-            \caption{Representación de un juego simultáneo en su forma normal}
-            \label{fig:enter-label}
-        \end{figure}
+        \end{center}
 
         Los jugadores se llaman Row y Column. Row tiene 4 estrategias posibles: Top, High, Low y Bottom; mientras que Column tiene 3 estrategias posibles: Left, Middle y Right. Cada selección de Row y Column genera un resultado potencial del juego. Los pagos asociados con cada resultado están en la celda correspondiente a esa fila y esa columna.
         \\
