@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{graphicx}
+\usepackage{graphicx, amsmath, amssymb}
 
 \title{Trabajo Práctico 4 - Juegos Repetidos}
 \author{Juani Elosegui}
@@ -44,19 +44,24 @@
                 \end{center}
             \end{table}
             \subsubsection*{(a)}
-                \[VP_{cooperar} \geq VP_{desviarse}\]
-                \[\frac{4}{1-\delta} \geq 6 + \frac{2 \delta}{1 - \delta}\]
-                \[\frac{4}{1-\delta} \geq \frac{6 \cdot (1 - \delta)}{1 - \delta} + \frac{2 \delta}{1 - \delta}\]
-                \[\frac{4}{1-\delta} \geq \frac{6 - 6 \delta}{1 - \delta} + \frac{2 \delta}{1 - \delta}\]
-                \[\frac{4}{1-\delta} \geq \frac{6 - 6 \delta + 2 \delta}{1 - \delta}\]
-                \[4 \geq 6 - 4 \delta\]
-                \[4 \delta + 4 - 6 \geq 0\]
-                \[4 \delta - 2 \geq 0\]
-                \[4 \delta \geq 2\]
-                \[\delta = 0,5\]
+                Para que se dé la cooperación, se pide que:
+                \[VP_{Cooperar} \geq VP_{Desviarse}\]
+                \[\frac{4}{1 - \delta} \geq 6 + \frac{2\delta}{1-\delta}\]
+                \[\implies \delta = 0,5\]
 
                 Será el valor mínimo para que cooperen.
             \subsubsection*{(b)}
+                Para que se dé la cooperación, se pide que:
+                \[4 + \delta 4 + \delta^{2}4 \geq 6 + \delta 2 + \delta^{2}2\]
+                \[\implies 4 + \delta 4 + \delta^{2}4 \geq 6 + 2\delta + 2\delta^{2}\]
+                \[\implies 4 + 4\delta + 4\delta^{2} \geq 6 + 2\delta + 2\delta^{2}\]
+                \[\implies 4\delta + 4\delta^{2} - 2\delta - 2\delta^{2} \geq 6 - 4\]
+                \[\implies 2\delta + 2\delta^{2} \geq 2\]
+                \[\implies 2\delta(1+\delta) \geq 2\]
+                \[\implies \delta(1+\delta) \geq \frac{2}{2}\]
+                \[\implies \delta^{2}+\delta \geq 1\]
+                \[\implies \delta^{2}+\delta - 1 \geq 0\]
+                \[\therefore \delta \approx 0,618 \]
                 
 
 \end{document}
