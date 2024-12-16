@@ -101,9 +101,9 @@
                                                 &               & \multicolumn{2}{c|}{\ulcolor[Blue]{Jugador B}} \\ \hline
                                                 &               & Arriba & Abajo \\ \hline
                         \multirow{3}{*}{\ulcolor[Red]{Jugador A}} 
-                                                & Rojo & \ulcolor[Red]{1}, \ulcolor[Blue]{3} & \ulcolor[Red]{8}, \ulcolor[Blue]{2} \\ \cline{2-4} 
-                                                & Verde & \ulcolor[Red]{6}, \ulcolor[Blue]{2} & \ulcolor[Red]{10}, \ulcolor[Blue]{1}\\\cline{2-4}
-                                                & Azul & \ulcolor[Red]{5}, \ulcolor[Blue]{4} & \ulcolor[Red]{9}, \ulcolor[Blue]{3}\\\hline
+                                                & Rojo & 1, \ulcolor[blue]{3} & 8, 2 \\ \cline{2-4} 
+                                                & Verde & \ulcolor[Red]{6}, \ulcolor[blue]{2} & \ulcolor[Red]{10}, 1\\\cline{2-4}
+                                                & Azul & 5, \ulcolor[Blue]{4} & 9, 3\\\hline
                         \end{tabular}
                     \caption{Juego representado de forma normal}
                 \end{table}
@@ -122,8 +122,8 @@
                                                 & & \multicolumn{2}{c|}{\ulcolor[Blue]{Jugador B}}  \\ \hline
                                                 & & Confesar & Negar  \\ \hline
                         \multirow{2}{*}{\ulcolor[Red]{Jugador A}} 
-                                                & Confesar & \ulcolor[Red]{-10}, \ulcolor[Blue]{-10} & \ulcolor[Red]{-1}, \ulcolor[Blue]{-25} \\ \cline{2-4} 
-                                                & Negar & \ulcolor[Red]{-25}, \ulcolor[Blue]{-1} & \ulcolor[Red]{-3}, \ulcolor[Blue]{-3} \\\hline
+                                                & Confesar & \ulcolor[Red]{-10}, \ulcolor[Blue]{-10} & \ulcolor[Red]{-1}, -25 \\ \cline{2-4} 
+                                                & Negar & -25, \ulcolor[Blue]{-1} & -3, -3 \\\hline
                         \end{tabular}
                     \caption{Juego de El Dilema del Prisionero}
                 \end{table}
@@ -294,7 +294,7 @@
                     \item Si \(p_{j} = p_{i} > 100\) se va a dar un desvío, porque cada firma obtiene la mitad de la demanda del mercado, pero podría obtener toda la demanda si baja su precio un poco.
                     \item Si \(p_{j} = p_{i} = 100\) las firmas no pueden aumentar sus ganancias al bajar los precios. Entonces, no hay incentivos al desvío y es un EN.
                 \end{itemize}
-                Este resultado se conoce como la paradoja de Bertrand: ¿cómo es que se alcanza el resultado de un mercado de competencia perfecta en un mercado donde hay nada más que dos oferentes?. La paradoja se puede resolver si decimos como supuestos que cada empresa vende un producto homogéneo idéntico y que cada empresa puede cubrir toda la demanda si elimina a su competidor.
+                Este resultado se conoce como la paradoja de Bertrand: ¿cómo es que se alcanza el resultado de un mercado de competencia perfecta en un mercado donde hay nada más que dos oferentes? La paradoja se puede resolver si decimos como supuestos que cada empresa vende un producto homogéneo idéntico y que cada empresa puede cubrir toda la demanda si elimina a su competidor.
     \section*{\underline{Módulo 2: Estrategias Mixtas}}
         \subsection*{Clase V: Estrategias Mixtas y Equilibrio de Nash (Parte 1)}
             \subsubsection*{Estrategias Mixtas}
@@ -381,7 +381,7 @@
                 \]
             \subsubsection*{Equilibrio de Nash}
                 \begin{center}
-                    \includegraphics[width=0.8 \linewidth]{figs/mixtas.png}
+                    \includegraphics[width=0.5 \linewidth]{figs/mixtas.png}
                 \end{center}
                 La intersección de los puntos de indiferencia de los jugadores será el EN en estrategias mixtas. Con sólo calcular los puntos de indiferencia, como fue \(PE_{Izquierda} = PE_{Derecha}\), se encuentra el EN. \\
                 EN = \(\{(p = 0,383;1-p = 0.617), (q = 0,417; 1-q = 0,583)\}\) \\
@@ -452,7 +452,7 @@
                 \\
                 Para que la estrategia mixta domine en forma estricta a D, necesitamos que \emph{ambas} condiciones se cumplan:
                 \[p \in \left(\frac{1}{3}, \frac{2}{3}\right)\]
-                Puede pasar que si hago cuentas que no tengan sentido, como decir que $p$ debe ser menor que 0,3 y mayor que 0,4 al mismo tiempo. Esto sería una contradicción. Si esto pasa, \emph{no existe valor de $p$ posible tal que ambas condiciones}, por lo tanto una estrategia cualquiera no es estrictamente dominada.
+                Puede pasar que si hago cuentas, que al final no tengan sentido, como decir que $p$ debe ser menor que 0,3 y mayor que 0,4 al mismo tiempo. Esto sería una contradicción. Si esto pasa, \emph{no existe valor de $p$ posible tal que ambas condiciones se cumplan}, por lo tanto una estrategia cualquiera no es estrictamente dominada.
     \section*{\underline{Módulo 3: Juegos Secuenciales/Dinámicos}}
         \subsection*{Clase VII: Juegos Secuenciales/Dinámicos (Parte 1)}    
             \subsubsection*{Juegos Secuenciales}
@@ -478,26 +478,28 @@
                 \end{table}
                 Tiene dos EN: \{(No entra, Compite);(Entra, No compite)\}. \\
                 \\
-                Los juegos secuenciales \emph{se pueden representar de forma extensiva}. Los árboles del juego están compuesto por todos los árboles de decisión de todos los jugadores, cada vez que juegan. Esto sirve para ilustrar todas las posibles acciones (ramas) que pueden ser tomadas por todos los jugadores e indica los pagos asociados a esa cadena de decisiones:
+                Los juegos secuenciales \emph{se pueden representar de forma extensiva}. Los árboles del juego están compuestos por todos los árboles de decisión de todos los jugadores, cada vez que juegan. Esto sirve para ilustrar todas las posibles acciones (ramas) que pueden ser tomadas por todos los jugadores e indica los pagos asociados a esa cadena de decisiones:
                 \begin{center}
                     \includegraphics[width=0.5 \linewidth]{figs/secuenciales.png}
                 \end{center}
-                Notar que las mejores respuestas se pueden identificar mediante la \emph{inducción hacia atrás}. Antes de usarla, debo sabe que la racional secuencial es un hecho: los jugadores son racionales cada vez que les toque jugar.
+                Notar que las mejores respuestas se pueden identificar mediante la \emph{inducción hacia atrás}. Antes de usarla, debo saber que la racional secuencial es un hecho: los jugadores son racionales cada vez que les toque jugar.
                 
                 Comienzo evaluando lo que pasa en los últimos nodos, hasta llegar al nodo inicial.
 
                 Luego de identificar las estrategias óptimas llegamos al ENPS del juego. \\
                 \\
-                Desafortunadamente para Sony, no hay una forma creíble de comprometerse a competir por precios. Bajar el precio para eliminar al rival del mercado es una estrategia costosa. Por eso el único ENPS de este juego es (E, NC).
+                Desafortunadamente para Sony, no hay una forma creíble de comprometerse a competir por precios. Bajar el precio para eliminar al rival del mercado es una estrategia costosa. Por eso el único ENPS de este juego es (E, NC). ¿Por qué es distinto del conjunto de EN? Porque (E, NC) nace de un subjuego. (NE, C) no es un subjuego. 
             \subsubsection*{Información}
                 El \textbf{conjunto de información} indica cuánto saben los jugadores sobre lo que pasó en un juego en un momento dado. Un conjunto de información es unitario cuando contiene a un único nodo de decisión. Teóricamente esto significa que el jugador que debe jugar en ese nodo conoce toda la historia pasada del juego. Cuando todos los conjuntos de información de un juego son unitarios decimos que se trate de un juego de información perfecta (como el problema de la firma entrante). \\
                 \\
-                Un juego con información perfecta puede ser algo como esto: \\
+                Un juego con información imperfecta puede ser algo como esto: \\
                 \begin{center}
                     \includegraphics[width=0.5 \linewidth]{figs/informacion.png}
                 \end{center}
                 Cuando llaman a jugar al jugador 2, este no sabe qué decisión tomó el jugador 1, si A o B. Por eso está con lineas punteadas. \\
                 El jugador 1 y el jugador 2 tienen un único conjunto de información. El conjunto de información del jugador 1 es unitario y el conjunto de información del jugador 2 tiene dos nodos de decisión.
+
+                También, hay dos conjuntos de información.
 
                 Las acciones para el jugador 2 (X, Y) son las mismas en los dos nodos porque ya no puede diferenciarlos.
             \subsubsection*{Subjuego}
@@ -633,7 +635,7 @@
         \subsubsection*{Juegos Repetidos Infinitos}
             En un juego finito, en la última etapa siempre se juega un EN. Si no hay (o no sé si hay) una etapa final pasa algo distinto. \\
             \\
-            Sabemos que ganar \$1 hoy no es lo mismo que ganar \$1 mañana. El costo de oportunidad hace que un peso invertido hoy me genera $1+r$ mañana por la tasa de retorno.
+            Sabemos que ganar \$1 hoy no es lo mismo que ganar \$1 mañana. El costo de oportunidad hace que un peso invertido hoy me genere $1+r$ mañana por la tasa de retorno.
 
             Los pagos de los distintos períodos se tienen que expresar en \emph{valor presente} para tomar la decisión correcta. \\ 
             El \textbf{factor de descuento} se define como: \(\delta = \frac{1}{1+r}\). Se sabe que \(0 < \delta < 1\). 
@@ -668,12 +670,12 @@
             Si coopero, obtengo \$5 porque \[5 + \delta 5 + \delta^{2}5 + \cdots = \frac{5}{1-\delta}\]
             Si hay desvío, obtengo \$6 una sola vez, pero luego consigo \$1 siempre porque \[6 + \delta 1 + \delta^{2}1 + \cdots = 6 + 1\frac{\delta}{1-\delta}\]
             Por lo tanto, me convendrá cooperar si: \[\frac{5}{1-\delta} \geq 6 + 1\frac{\delta}{1-\delta}\] \[\therefore \delta \geq \frac{1}{5}\]
-            Si adopto la estrategia Trigger, si los dos jugadores son suficientemente pacientes, es decir, \(\delta \geq \frac{1}{5}\), podrán alcanzar el óptimo (5, 5), en vez de llegar al resultado del Dilema del Prisionero del juego de un período. \\
+            Si adopto la estrategia Trigger, y si los dos jugadores son suficientemente pacientes, es decir, \(\delta \geq \frac{1}{5}\), podrán alcanzar el óptimo (5, 5), en vez de llegar al resultado del Dilema del Prisionero del juego de un período. \\
             \\
             Si son suficientemente pacientes los jugadores, ese no es el único equilibrio que se puede alcanzar. Si los jugadores juegan (D, D) en todos los períodos de tiempo también se puede considerar un resultado de equilibrio para todos los valores de $\delta$.
         \subsubsection*{Estrategia Forgiving Trigger (Castigo Temporario)}
             Se comienza jugando C en t = 0. \\
-            Se seguirá jugando C, siempre y cuendo los dos jugadores hayan jugado C en el período anterior. \\
+            Se seguirá jugando C, siempre y cuando los dos jugadores hayan jugado C en el período anterior. \\
             Si algún jugador no jugó C en el período anterior, los dos jugadores jugarán D por una cantidad $k$ de veces. \\
             En el período $k+1$ volverán a cooperar. \\
             \\
@@ -705,4 +707,6 @@
             Cuando $k = 2$, un nivel de impaciencia de $\delta = \frac{1}{5}$ no alcanza para sostener el acuerdo. Para que el acuerdo con dos períodos de castigo sea sostenible necesitamos que los jugadores sean más pacientes. Con $k = 2$ necesitamos aproximadamente una tasa de impaciencia de al menos $\delta = 0,21$.
 
             La posibilidad de conseguir un acuerdo depende de la tasa de impaciencia $\delta$ y de la dureza del castigo $k$.
+
+            \sepline
 \end{document}
